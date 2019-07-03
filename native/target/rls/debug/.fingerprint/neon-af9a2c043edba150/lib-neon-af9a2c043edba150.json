@@ -1,0 +1,1 @@
+{"rustc":11662075050264400882,"features":"[]","target":8100674167268114292,"profile":14672114853574311971,"path":818843348754365512,"deps":[["cslice v0.2.0","cslice",9708965743966700397],["neon-runtime v0.2.0","neon_runtime",4214986136889736145],["semver v0.9.0","semver",3857413308391958318]],"local":[{"Precalculated":"0.2.0"}],"rustflags":[],"metadata":9026775017703801291}

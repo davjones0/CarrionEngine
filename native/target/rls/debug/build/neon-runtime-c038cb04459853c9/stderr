@@ -1,0 +1,129 @@
+In file included from ../node_modules/nan/nan_new.h:189,
+                 from ../node_modules/nan/nan.h:203,
+                 from ../src/neon.cc:2:
+../node_modules/nan/nan_implementation_12_inl.h: In static member function ‘static Nan::imp::FactoryBase<v8::StringObject>::return_t Nan::imp::Factory<v8::StringObject>::New(v8::Local<v8::String>)’:
+../node_modules/nan/nan_implementation_12_inl.h:337:37: warning: ‘static v8::Local<v8::Value> v8::StringObject::New(v8::Local<v8::String>)’ is deprecated: Use Isolate* version [-Wdeprecated-declarations]
+   return v8::StringObject::New(value).As<v8::StringObject>();
+                                     ^
+In file included from /home/dj/.node-gyp/11.15.0/include/node/v8.h:26,
+                 from /home/dj/.node-gyp/11.15.0/include/node/node.h:63,
+                 from ../node_modules/nan/nan.h:51,
+                 from ../src/neon.cc:2:
+/home/dj/.node-gyp/11.15.0/include/node/v8.h:5242:37: note: declared here
+                 static Local<Value> New(Local<String> value));
+                                     ^~~
+/home/dj/.node-gyp/11.15.0/include/node/v8config.h:326:3: note: in definition of macro ‘V8_DEPRECATED’
+   declarator __attribute__((deprecated(message)))
+   ^~~~~~~~~~
+In file included from ../node_modules/nan/nan_new.h:189,
+                 from ../node_modules/nan/nan.h:203,
+                 from ../src/neon.cc:2:
+../node_modules/nan/nan_implementation_12_inl.h:337:37: warning: ‘static v8::Local<v8::Value> v8::StringObject::New(v8::Local<v8::String>)’ is deprecated: Use Isolate* version [-Wdeprecated-declarations]
+   return v8::StringObject::New(value).As<v8::StringObject>();
+                                     ^
+In file included from /home/dj/.node-gyp/11.15.0/include/node/v8.h:26,
+                 from /home/dj/.node-gyp/11.15.0/include/node/node.h:63,
+                 from ../node_modules/nan/nan.h:51,
+                 from ../src/neon.cc:2:
+/home/dj/.node-gyp/11.15.0/include/node/v8.h:5242:37: note: declared here
+                 static Local<Value> New(Local<String> value));
+                                     ^~~
+/home/dj/.node-gyp/11.15.0/include/node/v8config.h:326:3: note: in definition of macro ‘V8_DEPRECATED’
+   declarator __attribute__((deprecated(message)))
+   ^~~~~~~~~~
+In file included from ../src/neon.cc:2:
+../node_modules/nan/nan.h: In constructor ‘Nan::Utf8String::Utf8String(v8::Local<v8::Value>)’:
+../node_modules/nan/nan.h:1034:53: warning: ‘v8::Local<v8::String> v8::Value::ToString() const’ is deprecated: Use maybe version [-Wdeprecated-declarations]
+       v8::Local<v8::String> string = from->ToString();
+                                                     ^
+In file included from /home/dj/.node-gyp/11.15.0/include/node/node.h:63,
+                 from ../node_modules/nan/nan.h:51,
+                 from ../src/neon.cc:2:
+/home/dj/.node-gyp/11.15.0/include/node/v8.h:10251:15: note: declared here
+ Local<String> Value::ToString() const {
+               ^~~~~
+In file included from ../src/neon.cc:2:
+../node_modules/nan/nan.h:1044:74: warning: ‘int v8::String::WriteUtf8(char*, int, int*, int) const’ is deprecated: Use Isolate* version [-Wdeprecated-declarations]
+         length_ = string->WriteUtf8(str_, static_cast<int>(len), 0, flags);
+                                                                          ^
+In file included from /home/dj/.node-gyp/11.15.0/include/node/v8.h:26,
+                 from /home/dj/.node-gyp/11.15.0/include/node/node.h:63,
+                 from ../node_modules/nan/nan.h:51,
+                 from ../src/neon.cc:2:
+/home/dj/.node-gyp/11.15.0/include/node/v8.h:2754:21: note: declared here
+                 int WriteUtf8(char* buffer, int length = -1,
+                     ^~~~~~~~~
+/home/dj/.node-gyp/11.15.0/include/node/v8config.h:326:3: note: in definition of macro ‘V8_DEPRECATED’
+   declarator __attribute__((deprecated(message)))
+   ^~~~~~~~~~
+In file included from ../src/neon.cc:2:
+../node_modules/nan/nan.h: In function ‘void Nan::AsyncQueueWorker(Nan::AsyncWorker*)’:
+../node_modules/nan/nan.h:2167:62: warning: cast between incompatible function types from ‘void (*)(uv_work_t*)’ {aka ‘void (*)(uv_work_s*)’} to ‘uv_after_work_cb’ {aka ‘void (*)(uv_work_s*, int)’} [-Wcast-function-type]
+     , reinterpret_cast<uv_after_work_cb>(AsyncExecuteComplete)
+                                                              ^
+In file included from ../src/neon.cc:10:
+../src/neon_task.h: In member function ‘void neon::Task::complete()’:
+../src/neon_task.h:62:70: warning: ‘v8::Local<v8::Value> node::MakeCallback(v8::Isolate*, v8::Local<v8::Object>, v8::Local<v8::Function>, int, v8::Local<v8::Value>*)’ is deprecated: Use MakeCallback(..., async_context) [-Wdeprecated-declarations]
+     node::MakeCallback(isolate_, context->Global(), callback, 2, argv);
+                                                                      ^
+In file included from ../node_modules/nan/nan.h:51,
+                 from ../src/neon.cc:2:
+/home/dj/.node-gyp/11.15.0/include/node/node.h:174:50: note: declared here
+                 NODE_EXTERN v8::Local<v8::Value> MakeCallback(
+                                                  ^~~~~~~~~~~~
+/home/dj/.node-gyp/11.15.0/include/node/node.h:93:42: note: in definition of macro ‘NODE_DEPRECATED’
+     __attribute__((deprecated(message))) declarator
+                                          ^~~~~~~~~~
+In file included from ../src/neon.cc:10:
+../src/neon_task.h:62:70: warning: ‘v8::Local<v8::Value> node::MakeCallback(v8::Isolate*, v8::Local<v8::Object>, v8::Local<v8::Function>, int, v8::Local<v8::Value>*)’ is deprecated: Use MakeCallback(..., async_context) [-Wdeprecated-declarations]
+     node::MakeCallback(isolate_, context->Global(), callback, 2, argv);
+                                                                      ^
+In file included from ../node_modules/nan/nan.h:51,
+                 from ../src/neon.cc:2:
+/home/dj/.node-gyp/11.15.0/include/node/node.h:174:50: note: declared here
+                 NODE_EXTERN v8::Local<v8::Value> MakeCallback(
+                                                  ^~~~~~~~~~~~
+/home/dj/.node-gyp/11.15.0/include/node/node.h:93:42: note: in definition of macro ‘NODE_DEPRECATED’
+     __attribute__((deprecated(message))) declarator
+                                          ^~~~~~~~~~
+In file included from ../src/neon.cc:10:
+../src/neon_task.h: In function ‘void neon::queue_task(neon::Task*)’:
+../src/neon_task.h:98:35: warning: cast between incompatible function types from ‘void (*)(uv_work_t*)’ {aka ‘void (*)(uv_work_s*)’} to ‘uv_after_work_cb’ {aka ‘void (*)(uv_work_s*, int)’} [-Wcast-function-type]
+                 (uv_after_work_cb)complete_task);
+                                   ^~~~~~~~~~~~~
+../src/neon.cc: In function ‘int32_t Neon_String_Utf8Length(v8::Local<v8::String>)’:
+../src/neon.cc:163:26: warning: ‘int v8::String::Utf8Length() const’ is deprecated: Use Isolate version instead [-Wdeprecated-declarations]
+   return str->Utf8Length();
+                          ^
+In file included from /home/dj/.node-gyp/11.15.0/include/node/v8.h:26,
+                 from /home/dj/.node-gyp/11.15.0/include/node/node.h:63,
+                 from ../node_modules/nan/nan.h:51,
+                 from ../src/neon.cc:2:
+/home/dj/.node-gyp/11.15.0/include/node/v8.h:2682:52: note: declared here
+   V8_DEPRECATED("Use Isolate version instead", int Utf8Length() const);
+                                                    ^~~~~~~~~~
+/home/dj/.node-gyp/11.15.0/include/node/v8config.h:326:3: note: in definition of macro ‘V8_DEPRECATED’
+   declarator __attribute__((deprecated(message)))
+   ^~~~~~~~~~
+In file included from /home/dj/.node-gyp/11.15.0/include/node/node.h:63,
+                 from ../node_modules/nan/nan.h:51,
+                 from ../src/neon.cc:2:
+/home/dj/.node-gyp/11.15.0/include/node/v8.h: In instantiation of ‘void v8::PersistentBase<T>::SetWeak(P*, typename v8::WeakCallbackInfo<P>::Callback, v8::WeakCallbackType) [with P = node::ObjectWrap; T = v8::Object; typename v8::WeakCallbackInfo<P>::Callback = void (*)(const v8::WeakCallbackInfo<node::ObjectWrap>&)]’:
+/home/dj/.node-gyp/11.15.0/include/node/node_object_wrap.h:84:78:   required from here
+/home/dj/.node-gyp/11.15.0/include/node/v8.h:9710:16: warning: cast between incompatible function types from ‘v8::WeakCallbackInfo<node::ObjectWrap>::Callback’ {aka ‘void (*)(const v8::WeakCallbackInfo<node::ObjectWrap>&)’} to ‘Callback’ {aka ‘void (*)(const v8::WeakCallbackInfo<void>&)’} [-Wcast-function-type]
+                reinterpret_cast<Callback>(callback), type);
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/dj/.node-gyp/11.15.0/include/node/v8.h: In instantiation of ‘void v8::PersistentBase<T>::SetWeak(P*, typename v8::WeakCallbackInfo<P>::Callback, v8::WeakCallbackType) [with P = Nan::ObjectWrap; T = v8::Object; typename v8::WeakCallbackInfo<P>::Callback = void (*)(const v8::WeakCallbackInfo<Nan::ObjectWrap>&)]’:
+../node_modules/nan/nan_object_wrap.h:66:61:   required from here
+/home/dj/.node-gyp/11.15.0/include/node/v8.h:9710:16: warning: cast between incompatible function types from ‘v8::WeakCallbackInfo<Nan::ObjectWrap>::Callback’ {aka ‘void (*)(const v8::WeakCallbackInfo<Nan::ObjectWrap>&)’} to ‘Callback’ {aka ‘void (*)(const v8::WeakCallbackInfo<void>&)’} [-Wcast-function-type]
+/home/dj/.node-gyp/11.15.0/include/node/v8.h: In instantiation of ‘void v8::PersistentBase<T>::SetWeak(P*, typename v8::WeakCallbackInfo<P>::Callback, v8::WeakCallbackType) [with P = neon::ClassMetadata; T = v8::FunctionTemplate; typename v8::WeakCallbackInfo<P>::Callback = void (*)(const v8::WeakCallbackInfo<neon::ClassMetadata>&)]’:
+../src/neon_class_metadata.h:70:79:   required from here
+/home/dj/.node-gyp/11.15.0/include/node/v8.h:9710:16: warning: cast between incompatible function types from ‘v8::WeakCallbackInfo<neon::ClassMetadata>::Callback’ {aka ‘void (*)(const v8::WeakCallbackInfo<neon::ClassMetadata>&)’} to ‘Callback’ {aka ‘void (*)(const v8::WeakCallbackInfo<void>&)’} [-Wcast-function-type]
+/home/dj/.node-gyp/11.15.0/include/node/v8.h: In instantiation of ‘void v8::PersistentBase<T>::SetWeak(P*, typename v8::WeakCallbackInfo<P>::Callback, v8::WeakCallbackType) [with P = neon::BaseClassInstanceMetadata; T = v8::Object; typename v8::WeakCallbackInfo<P>::Callback = void (*)(const v8::WeakCallbackInfo<neon::BaseClassInstanceMetadata>&)]’:
+../src/neon_class_metadata.h:154:79:   required from here
+/home/dj/.node-gyp/11.15.0/include/node/v8.h:9710:16: warning: cast between incompatible function types from ‘v8::WeakCallbackInfo<neon::BaseClassInstanceMetadata>::Callback’ {aka ‘void (*)(const v8::WeakCallbackInfo<neon::BaseClassInstanceMetadata>&)’} to ‘Callback’ {aka ‘void (*)(const v8::WeakCallbackInfo<void>&)’} [-Wcast-function-type]
+In file included from ../src/neon.cc:8:
+../src/neon_string.h: In member function ‘v8::Local<v8::String> neon::Slice::ToJsString(v8::Isolate*, const char*)’:
+../src/neon_string.h:28:18: warning: ignoring return value of ‘bool v8::MaybeLocal<T>::ToLocal(v8::Local<S>*) const [with S = v8::String; T = v8::String]’, declared with attribute warn_unused_result [-Wunused-result]
+     maybe.ToLocal(&result);
+     ~~~~~~~~~~~~~^~~~~~~~~
