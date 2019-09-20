@@ -1,0 +1,6 @@
+name="iron"
+rgb_color=[67, 75, 77]
+density=8000
+rigid=1
+force_diffusion=1
+slice_resistance=5000

@@ -1,8 +1,10 @@
 extern crate specs;
 use specs::prelude::*;
-use specs::{Builder, DispatcherBuilder, World, Dispatcher};
+use specs::{Builder, DispatcherBuilder, World, WorldExt, Dispatcher};
 use engine::components::{Position, Movement, Icon, IsPlayer};
 use engine::systems::{ProcessMovement};
+use engine::resources::Map;
+use materials::materialRead::Material_Mem;
 
 pub struct Game_World {
     pub world: World,
@@ -20,6 +22,8 @@ impl Game_World {
         build_world.register::<Movement>();
         build_world.register::<Icon>();
         build_world.register::<IsPlayer>();
+        // read materials into memory
+        build_world.insert(Material_Mem::read_files());
         
         Game_World {
             world: build_world,
@@ -43,4 +47,10 @@ impl Game_World {
             
         self.world.maintain();
     }
+
+    pub fn create_map(&mut self) {
+        self.world.insert(Map::new());
+    }
+
+    
 }
