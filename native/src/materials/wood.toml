@@ -1,0 +1,5 @@
+name="wood"
+rgb_color=[68, 38, 20]
+density=1000
+rigid=1
+force_diffusion=0.3

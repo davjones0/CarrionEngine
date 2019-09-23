@@ -1,0 +1,6 @@
+name="bronze"
+rgb_color=[205, 127, 50]
+density=8500
+rigid=1
+force_diffusion=1
+slice_resistance=5000

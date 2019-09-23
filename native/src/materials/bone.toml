@@ -1,0 +1,6 @@
+name="bone"
+rgb_color=[227, 218, 201]
+density=1000
+rigid=1
+force_diffusion=1
+slice_resistance=1000
